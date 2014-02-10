@@ -1,0 +1,33 @@
+
+	<div class="row"><!-- main content -->
+		<div class="col-xs-8"><!-- main left -->
+			<h3><?php echo $info['title']; ?></h3>
+			<div class="videobox" id="youkuplayer"></div>
+			<h4>周边物品</h4>
+			<p class="keywords" id="keywords"></p>
+			<h4>周边信息时间点</h4>
+			<div class="timeline" id="timeline"></div>
+			<h4>视频列表</h4>
+			<div class="line"></div>
+			<ul class="list-video">
+				<?php
+				foreach($list as $k=>$v) {
+					$style = $vid == $k ? ' class="current"' : '';
+				?>
+
+				<li<?php echo $style;?>><a href="index.php?id=<?php echo $k; ?>"><?php 	echo $v['title']; ?></a></li>
+				<?php
+				}
+				?>
+			</ul>
+		</div><!-- main left -->
+		<div class="col-xs-4"><!-- main right -->
+			<div class="linebox">
+				<h3 class="box-header">周边商品</h3>
+				<ul class="box-content list-item" id="list-item">
+					<li class="nodata text-cneter">暂没有周边物品</li>
+				</ul>
+			</div>
+		</div><!-- main right -->
+	</div><!-- main content -->
+
